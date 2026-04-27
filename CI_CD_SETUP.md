@@ -1,32 +1,70 @@
-# GitHub Actions CI/CD Setup
+# CI/CD Reutilizavel (GitHub Actions)
 
-Este projeto ja esta com workflow em:
+Este repo agora tem dois workflows:
 
-- `.github/workflows/ci-cd.yml`
+- `.github/workflows/reusable-ci-cd.yml` (modelo reutilizavel)
+- `.github/workflows/ci-cd.yml` (workflow chamador deste projeto)
 
-## O que ele faz
+## Como pensar (simples)
 
-- Em `pull_request` para `main`: roda CI (`npm ci`, `npm run check`, `npm run build`).
-- Em `push` na `main`: roda CI e depois deploy automatico na VM por SSH.
+- `CI`: valida codigo (install + check + build).
+- `CD`: faz deploy automatico na VM apos push em `main`.
+- Reutilizavel: voce cria 1 modelo e so muda parametros por projeto.
 
-## Secrets necessarios no GitHub
+## Secrets necessarios
 
-No repositorio, va em `Settings > Secrets and variables > Actions > New repository secret` e crie:
+No repositorio: `Settings > Secrets and variables > Actions`
 
-- `SSH_HOST`: IP da VM de deploy (ex.: `100.102.45.127`)
-- `SSH_USER`: usuario SSH (ex.: `guilherme`)
-- `SSH_PRIVATE_KEY`: chave privada (conteudo completo, incluindo `-----BEGIN ...-----`)
-- `DEPLOY_PATH`: pasta do projeto na VM (ex.: `/home/guilherme/apps/clpengenharia`)
+- `SSH_HOST` (ex: `100.102.45.127`)
+- `SSH_USER` (ex: `guilherme`)
+- `SSH_PRIVATE_KEY` (chave privada completa)
 
-## Pre-requisitos na VM de deploy
+## Parametros que mudam por projeto
 
-- O repositorio precisa existir em `DEPLOY_PATH`.
-- A branch `main` precisa estar configurada como upstream.
-- Docker e `docker-compose` precisam estar instalados.
-- A VM precisa conseguir fazer `git pull origin main`.
+No arquivo `.github/workflows/ci-cd.yml`:
 
-## Fluxo de uso
+- `deploy_path`
+- `deploy_branch`
+- `compose_command` (`docker-compose` ou `docker compose`)
+- `run_deploy` (`true` ou `false`)
 
-- Voce abre PR para `main` -> CI valida.
-- Merge na `main` -> deploy automatico executa.
-- Se quiser rodar manualmente: aba `Actions` -> workflow `CI/CD` -> `Run workflow`.
+## Como usar em TODO projeto novo
+
+Opcao A (rapida):
+- Copie os 2 workflows para o novo repo.
+- Ajuste `deploy_path`.
+- Crie os 3 secrets.
+
+Opcao B (mais profissional - repo central):
+- Crie um repo tipo `infra-github-actions`.
+- Coloque la o `reusable-ci-cd.yml`.
+- Nos projetos, use:
+
+```yaml
+jobs:
+  pipeline:
+    uses: SEU_USUARIO/infra-github-actions/.github/workflows/reusable-ci-cd.yml@main
+    with:
+      deploy_path: "/home/guilherme/apps/meu-projeto"
+      deploy_branch: "main"
+      compose_command: "docker-compose"
+      run_deploy: true
+    secrets:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+```
+
+## Fluxo ideal para aprender
+
+1. Faz commit numa branch.
+2. Abre PR para `main` e observa o job `CI`.
+3. Faz merge na `main`.
+4. Observa o job `Deploy to VM`.
+5. Valida no servidor com `docker ps` e no dominio.
+
+## Dica de seguranca
+
+- Nao use senha em workflow.
+- Use usuario de deploy com chave SSH.
+- Restrinja permissoes desse usuario ao necessario.

@@ -1,0 +1,13 @@
+http:
+  routers:
+    hub:
+      rule: "Host(`hub.proxy`)"
+      entryPoints:
+        - web
+      service: hub-service
+
+  services:
+    hub-service:
+      loadBalancer:
+        servers:
+          - url: "http://100.72.95.93:3005"
