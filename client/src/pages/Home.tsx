@@ -90,12 +90,11 @@ export default function Home() {
       <header className="relative z-10">
         <div className="container pt-6">
           <div className="glass-panel flex items-center justify-between gap-6 rounded-full px-5 py-4">
-            <a href="#" className="flex items-center gap-3 text-sm text-slate-200 hover:opacity-80 transition-opacity">
-              <img
-                src="/assets/logo-clp.jfif"
-                alt="Logo CLP Engenharia Consultiva"
-                className="h-12 sm:h-14 w-auto object-contain"
-              />
+            <a href="#" className="group flex flex-col leading-none text-slate-100 hover:opacity-90 transition-opacity">
+              <span className="font-heading text-xl font-semibold tracking-tight text-white sm:text-2xl">CLP</span>
+              <span className="text-[0.62rem] font-medium uppercase tracking-[0.24em] text-cyan-200/85 sm:text-[0.66rem]">
+                Engenharia Consultiva
+              </span>
             </a>
 
             <nav className="hidden items-center gap-8 text-sm text-slate-300 lg:flex">
