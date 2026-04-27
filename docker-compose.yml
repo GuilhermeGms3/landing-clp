@@ -1,0 +1,12 @@
+services:
+  clpengenharia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: clpengenharia
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000

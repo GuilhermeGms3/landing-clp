@@ -132,7 +132,7 @@ export default function Home() {
                 Precisão técnica, agilidade e respaldo
               </div>
 
-              <h1 className="max-w-2xl font-heading text-5xl font-semibold leading-[0.96] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-2xl font-heading text-4xl font-semibold leading-[1.02] text-white sm:text-6xl sm:leading-[0.98] lg:text-7xl lg:leading-[0.96]">
                 Engenharia consultiva com <span className="text-cyan-300">segurança</span> para decisões críticas.
               </h1>
 
@@ -156,10 +156,10 @@ export default function Home() {
                 <img
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663576659315/avhyjNB8K9MB3tNxAxqxKc/engenharia-hero-futurista-GumLFZgBC2YEVSprzU9fxF.webp"
                   alt="Ambiente avançado de visualização de engenharia e infraestrutura"
-                  className="h-[420px] w-full rounded-[1.5rem] object-cover"
+                  className="h-[300px] w-full rounded-[1.5rem] object-cover sm:h-[380px] lg:h-[420px]"
                 />
 
-                <div className="absolute inset-x-9 bottom-9 grid gap-4 md:grid-cols-2">
+                <div className="mt-4 grid gap-4 md:grid-cols-2 lg:absolute lg:inset-x-9 lg:bottom-9 lg:mt-0">
                   <Card className="border-white/10 bg-slate-950/64 text-white shadow-2xl backdrop-blur-xl">
                     <CardContent className="p-5">
                       <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
@@ -351,11 +351,11 @@ export default function Home() {
                 <img
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663576659315/avhyjNB8K9MB3tNxAxqxKc/rede-tecnica-reativa-iXA475kVr5toh3nscXNbNJ.webp"
                   alt="Rede técnica e analítica representando integração de dados na engenharia"
-                  className="h-[420px] w-full object-cover opacity-80"
+                  className="h-[300px] w-full object-cover opacity-80 sm:h-[420px]"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,23,0.08),rgba(2,8,23,0.82))]" />
 
-                <div className="absolute inset-x-6 top-6 grid gap-4 md:grid-cols-2">
+                <div className="mt-4 grid gap-4 md:grid-cols-2 lg:absolute lg:inset-x-6 lg:top-6 lg:mt-0">
                   <div className="rounded-[1.25rem] border border-white/10 bg-slate-950/58 p-5 backdrop-blur-md">
                     <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
                       Nossa promessa
@@ -376,7 +376,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="absolute bottom-6 left-6 right-6 rounded-[1.5rem] border border-white/10 bg-slate-950/68 p-5 backdrop-blur-xl">
+                <div className="mt-4 rounded-[1.5rem] border border-white/10 bg-slate-950/68 p-5 backdrop-blur-xl lg:absolute lg:bottom-6 lg:left-6 lg:right-6 lg:mt-0">
                   <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
                     <div>
                       <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
