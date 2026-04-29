@@ -93,14 +93,14 @@ export function InteractiveEngineeringBackground() {
         >
           <defs>
             <linearGradient id="engineering-line" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgba(34,211,238,0.05)" />
-              <stop offset="48%" stopColor="rgba(148,163,184,0.24)" />
-              <stop offset="100%" stopColor="rgba(245,158,11,0.12)" />
+              <stop offset="0%" stopColor="rgba(59,130,246,0.18)" />
+              <stop offset="48%" stopColor="rgba(37,99,235,0.30)" />
+              <stop offset="100%" stopColor="rgba(30,64,175,0.22)" />
             </linearGradient>
             <radialGradient id="engineering-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="rgba(34,211,238,0.28)" />
-              <stop offset="60%" stopColor="rgba(34,211,238,0.08)" />
-              <stop offset="100%" stopColor="rgba(34,211,238,0)" />
+              <stop offset="0%" stopColor="rgba(96,165,250,0.34)" />
+              <stop offset="60%" stopColor="rgba(59,130,246,0.14)" />
+              <stop offset="100%" stopColor="rgba(59,130,246,0)" />
             </radialGradient>
           </defs>
 
@@ -120,7 +120,7 @@ export function InteractiveEngineeringBackground() {
                 cx={`${node.x}%`}
                 cy={`${node.y}%`}
                 r={node.size * 0.52}
-                fill={node.id % 3 === 0 ? "rgba(251,191,36,0.85)" : "rgba(186,230,253,0.95)"}
+                fill={node.id % 3 === 0 ? "rgba(147,197,253,0.92)" : "rgba(191,219,254,0.96)"}
               />
             </g>
           ))}
@@ -128,15 +128,15 @@ export function InteractiveEngineeringBackground() {
       </div>
 
       <div
-        className="absolute h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl transition-all duration-300"
+        className="absolute h-72 w-72 rounded-full bg-blue-400/18 blur-3xl transition-all duration-300"
         style={{
           left: `calc(${pointer.x}% - 9rem)`,
           top: `calc(${pointer.y}% - 9rem)`,
         }}
       />
 
-      <div className="absolute -left-12 top-24 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-amber-400/8 blur-3xl" />
+      <div className="absolute -left-12 top-24 h-80 w-80 rounded-full bg-blue-500/14 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-indigo-500/14 blur-3xl" />
     </div>
   );
 }

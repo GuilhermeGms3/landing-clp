@@ -53,13 +53,13 @@ const segments = [
 
 const differentiators = [
   {
-    title: "Atua??o em projetos de alta complexidade",
-    text: "Experi?ncia em demandas com elevado impacto financeiro e responsabilidade t?cnica.",
+    title: "Atuação em projetos de alta complexidade",
+    text: "Experiência em demandas com elevado impacto financeiro e responsabilidade técnica.",
     icon: ShieldCheck,
   },
   {
-    title: "Solu??es sob medida",
-    text: "Foco em resultado real para o cliente, n?o apenas no cumprimento de escopo m?nimo.",
+    title: "Soluções sob medida",
+    text: "Foco em resultado real para o cliente, não apenas no cumprimento de escopo mínimo.",
     icon: Briefcase,
   },
   {
@@ -84,32 +84,32 @@ export default function Home() {
     <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <InteractiveEngineeringBackground />
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(148,163,184,0.16),transparent_24%),radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.16),transparent_20%),linear-gradient(180deg,rgba(5,16,31,0.72),rgba(5,16,31,0.96))]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[linear-gradient(180deg,rgba(59,130,246,0.18),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.28),transparent_24%),radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.28),transparent_20%),linear-gradient(180deg,rgba(3,12,35,0.88),rgba(3,10,30,0.98))]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[linear-gradient(180deg,rgba(37,99,235,0.24),transparent)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.12] mix-blend-screen engineering-grid" />
 
       <header className="relative z-10">
         <div className="container pt-6">
-          <div className="glass-panel flex items-center justify-between gap-6 rounded-full px-5 py-4">
+          <div className="glass-panel flex items-center justify-between gap-6 rounded-full px-5 py-4 bg-blue-950/40">
             <a href="#" className="group inline-flex items-center rounded-2xl bg-blue-900/35 px-3 py-2 ring-1 ring-blue-300/25 transition-opacity hover:opacity-95">
               <img
-                src="/assets/logo-clp.jfif"
+                src="/assets/logo-clp-oficial.jpeg"
                 alt="CLP Engenharia Consultiva"
-                className="h-14 w-auto rounded-sm object-contain sm:h-16"
+                className="h-14 w-auto rounded-md object-cover sm:h-16"
               />
             </a>
 
-            <nav className="hidden items-center gap-8 text-sm text-slate-300 lg:flex">
-              <a className="transition-colors hover:text-white" href="#servicos">
+            <nav className="hidden items-center gap-3 rounded-full border border-blue-300/20 bg-blue-900/30 px-3 py-2 text-sm text-slate-200 lg:flex">
+              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#servicos">
                 Serviços
               </a>
-              <a className="transition-colors hover:text-white" href="#segmentos">
+              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#segmentos">
                 Segmentos
               </a>
-              <a className="transition-colors hover:text-white" href="#diferenciais">
+              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#diferenciais">
                 Diferenciais
               </a>
-              <a className="transition-colors hover:text-white" href="#contato">
+              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#contato">
                 Contato
               </a>
             </nav>
@@ -155,9 +155,9 @@ export default function Home() {
 
               <div className="glass-panel relative overflow-hidden rounded-[2rem] border border-white/12 p-5 shadow-[0_30px_90px_rgba(2,8,23,0.55)]">
                 <img
-                  src="/assets/logo-clp.jfif"
+                  src="/assets/logo-clp-oficial.jpeg"
                   alt="Ambiente avançado de visualização de engenharia e infraestrutura"
-                  className="h-[300px] w-full rounded-[1.5rem] object-cover sm:h-[380px] lg:h-[420px]"
+                  className="h-[300px] w-full rounded-[1.5rem] object-cover object-top sm:h-[380px] lg:h-[420px]" style={{ objectPosition: "center 20%" }}
                 />
 
                 <div className="mt-4 grid gap-4 md:grid-cols-2 lg:absolute lg:inset-x-9 lg:bottom-9 lg:mt-0">
@@ -169,13 +169,13 @@ export default function Home() {
                       <p className="mt-3 font-heading text-2xl font-semibold text-blue-300">
                         ENTREGAS NO PRAZO
                       </p>
-                      <p className="mt-2 text-sm leading-6 text-slate-300">
+                      <p className="mt-2 text-sm leading-6 text-slate-100">
                         Sem perder detalhamento técnico e qualidade.
                       </p>
                     </CardContent>
                   </Card>
 
-                  <Card className="border-white/10 bg-white/8 text-white shadow-2xl backdrop-blur-xl">
+                  <Card className="border-blue-200/20 bg-slate-900/72 text-white shadow-2xl backdrop-blur-xl">
                     <CardContent className="flex h-full flex-col justify-between p-5">
                       <div>
                         <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
@@ -383,16 +383,16 @@ export default function Home() {
 
         <section id="contato" className="container pb-20">
           <div className="relative overflow-hidden rounded-[2.2rem] border border-white/12 bg-[linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] p-8 shadow-[0_24px_70px_rgba(2,8,23,0.46)] backdrop-blur-xl lg:p-10">
-            <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.18),transparent_56%)] lg:block" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.24),transparent_56%)] lg:block" />
 
             <div className="relative grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
                 <p className="eyebrow">Contato</p>
                 <h2 className="section-title mt-4 max-w-lg text-white">
-                  Precisa de uma solu??o t?cnica confi?vel e atendendo o seu prazo?
+                  Precisa de uma solução técnica confiável e atendendo o seu prazo?
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-7 text-slate-300">
-                  Entre em contato e receba uma proposta estruturada para seu cen?rio, sem improviso.
+                  Entre em contato e receba uma proposta estruturada para seu cenário, sem improviso.
                 </p>
               </div>
 
@@ -410,9 +410,9 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/52 p-6 sm:col-span-2">
-                  <p className="text-[0.7rem] tracking-[0.24em] text-slate-400 uppercase">Localiza??o</p>
+                  <p className="text-[0.7rem] tracking-[0.24em] text-slate-400 uppercase">Localização</p>
                   <p className="mt-3 text-base leading-7 text-slate-200">
-                    Bras?lia, DF. Atendimento consultivo para projetos, or?amentos, per?cias e avalia??es em todo o Brasil.
+                    Brasília, DF.
                   </p>
                 </div>
               </div>
