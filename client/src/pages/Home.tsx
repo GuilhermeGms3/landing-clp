@@ -233,9 +233,15 @@ export default function Home() {
           <div className="space-y-8">
             <div>
               <p className="eyebrow">Segmentos</p>
-              <h2 className="section-title mt-4 max-w-2xl text-white">
+              <motion.h2
+                initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                viewport={{ once: true, amount: 0.55 }}
+                transition={{ duration: 0.75, ease: "easeOut" }}
+                className="section-title mt-4 max-w-2xl bg-[linear-gradient(90deg,#e2e8f0_0%,#bfdbfe_45%,#93c5fd_60%,#e2e8f0_100%)] bg-clip-text text-transparent"
+              >
                 Atendemos empresas e pessoas que necessitam de qualidade e prazo sem perder a segurança e amparo na tomada de decisões baseadas em conteúdo técnico.
-              </h2>
+              </motion.h2>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
