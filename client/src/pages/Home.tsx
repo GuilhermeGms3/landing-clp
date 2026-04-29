@@ -16,7 +16,6 @@ import {
   HardHat,
   LineChart,
   MessageCircle,
-  MoveUpRight,
   ShieldCheck,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -54,18 +53,18 @@ const segments = [
 
 const differentiators = [
   {
-    title: "Redução de risco técnico",
-    text: "Análises rigorosas e documentação completa para decisões seguras e com respaldo profissional.",
+    title: "Atua??o em projetos de alta complexidade",
+    text: "Experi?ncia em demandas com elevado impacto financeiro e responsabilidade t?cnica.",
     icon: ShieldCheck,
   },
   {
-    title: "Agilidade com qualidade",
-    text: "Entregas rápidas sem comprometer o detalhamento técnico e a precisão das soluções.",
+    title: "Solu??es sob medida",
+    text: "Foco em resultado real para o cliente, n?o apenas no cumprimento de escopo m?nimo.",
     icon: Briefcase,
   },
   {
-    title: "Decisão apoiada",
-    text: "Relatórios e pareceres pensados para sua necessidade real, não apenas para o mínimo básico.",
+    title: "Compromisso com prazos",
+    text: "Postura proativa para antecipar demandas e manter entregas com qualidade e detalhamento.",
     icon: CheckCircle,
   },
 ];
@@ -78,23 +77,26 @@ const process = [
 
 
 
+
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <InteractiveEngineeringBackground />
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(148,163,184,0.16),transparent_24%),radial-gradient(circle_at_15%_20%,rgba(245,158,11,0.12),transparent_20%),linear-gradient(180deg,rgba(5,16,31,0.72),rgba(5,16,31,0.96))]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[linear-gradient(180deg,rgba(56,189,248,0.12),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(148,163,184,0.16),transparent_24%),radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.16),transparent_20%),linear-gradient(180deg,rgba(5,16,31,0.72),rgba(5,16,31,0.96))]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[linear-gradient(180deg,rgba(59,130,246,0.18),transparent)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.12] mix-blend-screen engineering-grid" />
 
       <header className="relative z-10">
         <div className="container pt-6">
           <div className="glass-panel flex items-center justify-between gap-6 rounded-full px-5 py-4">
-            <a href="#" className="group flex flex-col leading-none text-slate-100 hover:opacity-90 transition-opacity">
-              <span className="font-heading text-xl font-semibold tracking-tight text-white sm:text-2xl">CLP</span>
-              <span className="text-[0.62rem] font-medium uppercase tracking-[0.24em] text-cyan-200/85 sm:text-[0.66rem]">
-                Engenharia Consultiva
-              </span>
+            <a href="#" className="group inline-flex items-center rounded-2xl bg-blue-900/35 px-3 py-2 ring-1 ring-blue-300/25 transition-opacity hover:opacity-95">
+              <img
+                src="/assets/logo-clp.jfif"
+                alt="CLP Engenharia Consultiva"
+                className="h-14 w-auto rounded-sm object-contain sm:h-16"
+              />
             </a>
 
             <nav className="hidden items-center gap-8 text-sm text-slate-300 lg:flex">
@@ -126,17 +128,17 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-3xl"
             >
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-xs font-medium tracking-[0.22em] text-amber-100 uppercase backdrop-blur-md">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-300/30 bg-blue-300/10 px-4 py-2 text-xs font-medium tracking-[0.22em] text-blue-100 uppercase backdrop-blur-md">
                 <BadgeCheck className="h-4 w-4" />
                 Precisão técnica, agilidade e respaldo
               </div>
 
               <h1 className="max-w-2xl font-heading text-4xl font-semibold leading-[1.02] text-white sm:text-6xl sm:leading-[0.98] lg:text-7xl lg:leading-[0.96]">
-                Engenharia consultiva com <span className="text-cyan-300">segurança</span> para decisões críticas.
+                Engenharia consultiva com <span className="text-blue-300">segurança</span> para decisões críticas.
               </h1>
 
               <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
-                Projetos, orçamentos, perícias e avaliações para condomínios, imobiliárias, indústrias, escritórios de advocacia e empresas de engenharia.
+                Perícias, avaliações e assistência técnica. Soluções em projetos de engenharia realizados com alto nível de detalhamento e entregas no prazo.
               </p>
 
 
@@ -148,12 +150,12 @@ export default function Home() {
               transition={{ duration: 0.85, delay: 0.15, ease: "easeOut" }}
               className="relative"
             >
-              <div className="absolute -left-10 top-8 hidden h-36 w-36 rounded-full bg-cyan-400/12 blur-3xl lg:block" />
-              <div className="absolute -bottom-8 right-8 hidden h-40 w-40 rounded-full bg-amber-400/12 blur-3xl lg:block" />
+              <div className="absolute -left-10 top-8 hidden h-36 w-36 rounded-full bg-blue-500/16 blur-3xl lg:block" />
+              <div className="absolute -bottom-8 right-8 hidden h-40 w-40 rounded-full bg-blue-400/14 blur-3xl lg:block" />
 
               <div className="glass-panel relative overflow-hidden rounded-[2rem] border border-white/12 p-5 shadow-[0_30px_90px_rgba(2,8,23,0.55)]">
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663576659315/avhyjNB8K9MB3tNxAxqxKc/engenharia-hero-futurista-GumLFZgBC2YEVSprzU9fxF.webp"
+                  src="/assets/logo-clp.jfif"
                   alt="Ambiente avançado de visualização de engenharia e infraestrutura"
                   className="h-[300px] w-full rounded-[1.5rem] object-cover sm:h-[380px] lg:h-[420px]"
                 />
@@ -162,13 +164,13 @@ export default function Home() {
                   <Card className="border-white/10 bg-slate-950/64 text-white shadow-2xl backdrop-blur-xl">
                     <CardContent className="p-5">
                       <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
-                        Nossa promessa
+                        NOSSO COMPROMISSO
                       </p>
-                      <p className="mt-3 font-heading text-2xl font-semibold text-cyan-300">
-                        Redução de risco
+                      <p className="mt-3 font-heading text-2xl font-semibold text-blue-300">
+                        ENTREGAS NO PRAZO
                       </p>
                       <p className="mt-2 text-sm leading-6 text-slate-300">
-                        Análises rigorosas e documentação completa para decisões seguras.
+                        Sem perder detalhamento técnico e qualidade.
                       </p>
                     </CardContent>
                   </Card>
@@ -182,10 +184,6 @@ export default function Home() {
                         <p className="mt-2 text-sm leading-6 text-slate-300">
                           Condomínios, imobiliárias, indústrias, construtoras, investidores e escritórios jurídicos.
                         </p>
-                      </div>
-                      <div className="mt-6 flex items-center justify-between text-sm text-slate-200">
-                        <span>Visão integrada</span>
-                        <MoveUpRight className="h-4 w-4 text-amber-300" />
                       </div>
                     </CardContent>
                   </Card>
@@ -203,7 +201,7 @@ export default function Home() {
                 Soluções técnicas pensadas para sua necessidade real.
               </h2>
               <p className="max-w-md text-base leading-7 text-slate-300">
-                Atuamos com visão integrada entre concepção, execução e gestão, oferecendo suporte técnico com rigor, prazo e qualidade.
+                Atuamos com planejamento técnico e execução precisa, oferecendo suporte com rigor, prazo e qualidade.
               </p>
             </div>
 
@@ -217,9 +215,9 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="glass-panel group rounded-[1.75rem] border border-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/9"
+                    className="glass-panel group rounded-[1.75rem] border border-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-300/35 hover:bg-white/9"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.12)]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-300/25 bg-blue-300/12 text-blue-200 shadow-[0_0_30px_rgba(34,211,238,0.12)]">
                       <Icon className="h-5 w-5" />
                     </div>
                     <h3 className="mt-6 font-heading text-xl font-semibold text-white">{item.title}</h3>
@@ -236,7 +234,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">Segmentos</p>
               <h2 className="section-title mt-4 max-w-2xl text-white">
-                Atendemos empresas e profissionais que precisam de rigor técnico.
+                Atendemos empresas e pessoas que necessitam de qualidade e prazo sem perder a segurança e amparo na tomada de decisões baseadas em conteúdo técnico.
               </h2>
             </div>
 
@@ -250,7 +248,7 @@ export default function Home() {
                   transition={{ duration: 0.55, delay: index * 0.08 }}
                   className="glass-panel flex items-center gap-3 rounded-[1.5rem] border border-white/10 px-5 py-4"
                 >
-                  <CheckCircle className="h-5 w-5 shrink-0 text-cyan-300" />
+                  <CheckCircle className="h-5 w-5 shrink-0 text-blue-300" />
                   <p className="text-sm font-medium text-slate-200">{segment}</p>
                 </motion.div>
               ))}
@@ -287,7 +285,7 @@ export default function Home() {
                       className="glass-panel rounded-[1.5rem] border border-white/10 p-5"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-cyan-200">
+                        <div className="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-blue-200">
                           <Icon className="h-5 w-5" />
                         </div>
                         <div>
@@ -299,18 +297,6 @@ export default function Home() {
                   );
                 })}
               </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="mt-8 glass-panel rounded-[1.5rem] border border-amber-300/20 bg-amber-300/8 p-5"
-              >
-                <p className="text-sm leading-7 text-amber-100">
-                  <span className="font-semibold">Sócios e consultor com 7 a 10 anos de experiência</span> em serviços de alto valor técnico e impacto financeiro.
-                </p>
-              </motion.div>
             </div>
           </div>
         </section>
@@ -336,7 +322,7 @@ export default function Home() {
                     transition={{ duration: 0.55, delay: index * 0.1 }}
                     className="glass-panel flex items-center gap-5 rounded-[1.5rem] border border-white/10 px-5 py-5"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/10 font-heading text-sm font-semibold text-cyan-200">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-blue-300/25 bg-blue-300/12 font-heading text-sm font-semibold text-blue-200">
                       0{index + 1}
                     </span>
                     <p className="text-sm leading-7 text-slate-200">{item}</p>
@@ -368,7 +354,7 @@ export default function Home() {
                     <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
                       Resultado
                     </p>
-                    <p className="mt-3 font-heading text-2xl font-semibold text-cyan-300">Confiável</p>
+                    <p className="mt-3 font-heading text-2xl font-semibold text-blue-300">Confiável</p>
                     <p className="mt-2 text-sm leading-6 text-slate-300">
                       Decisões apoiadas em rigor técnico.
                     </p>
@@ -385,7 +371,7 @@ export default function Home() {
                         Entregas pensadas para sua necessidade real, não apenas para o mínimo básico.
                       </p>
                     </div>
-                    <span className="inline-flex items-center gap-2 text-sm font-medium text-amber-200">
+                    <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-200">
                       Engenharia com respaldo <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>
@@ -397,19 +383,17 @@ export default function Home() {
 
         <section id="contato" className="container pb-20">
           <div className="relative overflow-hidden rounded-[2.2rem] border border-white/12 bg-[linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] p-8 shadow-[0_24px_70px_rgba(2,8,23,0.46)] backdrop-blur-xl lg:p-10">
-            <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.14),transparent_56%)] lg:block" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.18),transparent_56%)] lg:block" />
 
             <div className="relative grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
                 <p className="eyebrow">Contato</p>
                 <h2 className="section-title mt-4 max-w-lg text-white">
-                  Pronto para uma solução técnica com segurança?
+                  Precisa de uma solu??o t?cnica confi?vel e atendendo o seu prazo?
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-7 text-slate-300">
-                  Estruturamos propostas sob medida para empresas, profissionais e instituições que precisam de engenharia consultiva com rigor, agilidade e respaldo técnico.
+                  Entre em contato e receba uma proposta estruturada para seu cen?rio, sem improviso.
                 </p>
-
-
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -422,13 +406,13 @@ export default function Home() {
                 <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/52 p-6">
                   <p className="text-[0.7rem] tracking-[0.24em] text-slate-400 uppercase">Telefone</p>
                   <p className="mt-3 font-heading text-lg font-semibold text-white">
-                    (11) 98765-4321
+                    (61) 99120-1147
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/52 p-6 sm:col-span-2">
-                  <p className="text-[0.7rem] tracking-[0.24em] text-slate-400 uppercase">Localização</p>
+                  <p className="text-[0.7rem] tracking-[0.24em] text-slate-400 uppercase">Localiza??o</p>
                   <p className="mt-3 text-base leading-7 text-slate-200">
-                    Brasília, DF. Atendimento consultivo para projetos, orçamentos, perícias e avaliações em todo o Brasil.
+                    Bras?lia, DF. Atendimento consultivo para projetos, or?amentos, per?cias e avalia??es em todo o Brasil.
                   </p>
                 </div>
               </div>
