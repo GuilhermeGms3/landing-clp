@@ -6,7 +6,7 @@ Compatível com tema futurista infraestrutural da página.
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = "5511987654321";
+const WHATSAPP_NUMBER = "5561991201147";
 const WHATSAPP_MESSAGE = "Olá, gostaria de mais informações sobre os serviços.";
 
 export function FloatingWhatsAppButton() {

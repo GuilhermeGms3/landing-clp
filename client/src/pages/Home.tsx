@@ -6,7 +6,6 @@ Conteúdo baseado na base de marca CLP Engenharia Consultiva.
 */
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   BadgeCheck,
   Building2,
   Briefcase,
@@ -93,9 +92,9 @@ export default function Home() {
           <div className="glass-panel flex items-center justify-between gap-6 rounded-full px-5 py-4 bg-blue-950/40">
             <a href="#" className="group inline-flex items-center rounded-2xl bg-blue-900/35 px-3 py-2 ring-1 ring-blue-300/25 transition-opacity hover:opacity-95">
               <img
-                src="/assets/logo-clp-oficial.jpeg"
+                src="/assets/logo-clp-header-transparent.png"
                 alt="CLP Engenharia Consultiva"
-                className="h-14 w-auto rounded-md object-cover sm:h-16"
+                className="h-14 w-auto rounded-md object-contain sm:h-16"
               />
             </a>
 
@@ -377,9 +376,7 @@ export default function Home() {
                         Entregas pensadas para sua necessidade real, não apenas para o mínimo básico.
                       </p>
                     </div>
-                    <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-200">
-                      Engenharia com respaldo <ArrowRight className="h-4 w-4" />
-                    </span>
+                    
                   </div>
                 </div>
               </div>
