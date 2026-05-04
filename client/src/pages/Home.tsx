@@ -1,4 +1,4 @@
-/*
+﻿/*
 Design philosophy for this file: Futurismo infraestrutural.
 Use composição assimétrica, atmosfera azul petróleo, painéis translúcidos, brilho contido e linguagem técnica corporativa.
 Cada bloco deve reforçar precisão, sofisticação e engenharia avançada.
@@ -24,7 +24,7 @@ import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 const services = [
   {
     title: "Projetos de engenharia",
-    text: "Soluções técnicas sob medida com compatibilização, viabilidade e prazo confiável para projetos elétricos e civis.",
+    text: "Soluções em projetos de engenharia realizados com alto nível de detalhamento e entregas no prazo. ",
     icon: DraftingCompass,
   },
   {
@@ -33,7 +33,7 @@ const services = [
     icon: LineChart,
   },
   {
-    title: "Perícias e assistência técnica",
+    title: "Perícias, avaliações e assistência técnica",
     text: "Laudo técnico com respaldo, análise de patologias e parecer técnico para processos e negociações.",
     icon: FileText,
   },
@@ -52,17 +52,17 @@ const segments = [
 
 const differentiators = [
   {
-    title: "Atuação em projetos de alta complexidade",
+    title: "Atuação em projetos de alta complexidade e elevado impacto financeiro ",
     text: "Experiência em demandas com elevado impacto financeiro e responsabilidade técnica.",
     icon: ShieldCheck,
   },
   {
-    title: "Soluções sob medida",
+    title: "Soluções sob medida, focadas em resultado e não somente em escopo",
     text: "Foco em resultado real para o cliente, não apenas no cumprimento de escopo mínimo.",
     icon: Briefcase,
   },
   {
-    title: "Compromisso com prazos",
+    title: "Compromisso com prazos e postura proativa na antecipação de demandas ",
     text: "Postura proativa para antecipar demandas e manter entregas com qualidade e detalhamento.",
     icon: CheckCircle,
   },
@@ -89,26 +89,26 @@ export default function Home() {
 
       <header className="relative z-10">
         <div className="container pt-6">
-          <div className="glass-panel flex items-center justify-between gap-6 rounded-full px-5 py-4 bg-blue-950/40">
-            <a href="#" className="group inline-flex items-center rounded-2xl bg-blue-900/35 px-3 py-2 ring-1 ring-blue-300/25 transition-opacity hover:opacity-95">
+          <div className="glass-panel flex items-center justify-center gap-6 rounded-full bg-blue-950/40 px-5 py-3 lg:justify-between lg:py-2">
+            <a href="#" className="group inline-flex items-center transition-opacity hover:opacity-95">
               <img
                 src="/assets/logo-clp-header-transparent.png"
                 alt="CLP Engenharia Consultiva"
-                className="h-14 w-auto rounded-md object-contain sm:h-16"
+                className="h-28 w-auto object-contain sm:h-28 lg:h-16"
               />
             </a>
 
-            <nav className="hidden items-center gap-3 rounded-full border border-blue-300/20 bg-blue-900/30 px-3 py-2 text-sm text-slate-200 lg:flex">
-              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#servicos">
+            <nav className="hidden flex-1 items-center justify-center gap-3 text-sm text-slate-200 lg:flex">
+              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#servicos">
                 Serviços
               </a>
-              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#segmentos">
+              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#segmentos">
                 Segmentos
               </a>
-              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#diferenciais">
+              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#diferenciais">
                 Diferenciais
               </a>
-              <a className="rounded-full px-4 py-2 transition-all hover:bg-blue-400/20 hover:text-white" href="#contato">
+              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#contato">
                 Contato
               </a>
             </nav>
@@ -306,83 +306,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container pb-24">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div>
-              <p className="eyebrow">Processo</p>
-              <h2 className="section-title mt-4 max-w-lg text-white">
-                Como trabalhamos.
-              </h2>
-              <p className="mt-6 max-w-xl text-base leading-7 text-slate-300">
-                Cada demanda recebe análise rigorosa, desenvolvimento com prazo definido e entrega com documentação completa e respaldo profissional.
-              </p>
-
-              <div className="mt-10 space-y-4">
-                {process.map((item, index) => (
-                  <motion.div
-                    key={item}
-                    initial={{ opacity: 0, y: 18 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.55, delay: index * 0.1 }}
-                    className="glass-panel flex items-center gap-5 rounded-[1.5rem] border border-white/10 px-5 py-5"
-                  >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-blue-300/25 bg-blue-300/12 font-heading text-sm font-semibold text-blue-200">
-                      0{index + 1}
-                    </span>
-                    <p className="text-sm leading-7 text-slate-200">{item}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            <div className="glass-panel overflow-hidden rounded-[2rem] border border-white/10 p-5">
-              <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/60">
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663576659315/avhyjNB8K9MB3tNxAxqxKc/rede-tecnica-reativa-iXA475kVr5toh3nscXNbNJ.webp"
-                  alt="Rede técnica e analítica representando integração de dados na engenharia"
-                  className="h-[300px] w-full object-cover opacity-80 sm:h-[420px]"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,23,0.08),rgba(2,8,23,0.82))]" />
-
-                <div className="mt-4 grid gap-4 md:grid-cols-2 lg:absolute lg:inset-x-6 lg:top-6 lg:mt-0">
-                  <div className="rounded-[1.25rem] border border-white/10 bg-slate-950/58 p-5 backdrop-blur-md">
-                    <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
-                      Nossa promessa
-                    </p>
-                    <p className="mt-3 font-heading text-2xl font-semibold text-white">Segurança</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">
-                      Análises rigorosas com documentação completa.
-                    </p>
-                  </div>
-                  <div className="rounded-[1.25rem] border border-white/10 bg-white/6 p-5 backdrop-blur-md">
-                    <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
-                      Resultado
-                    </p>
-                    <p className="mt-3 font-heading text-2xl font-semibold text-blue-300">Confiável</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">
-                      Decisões apoiadas em rigor técnico.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 rounded-[1.5rem] border border-white/10 bg-slate-950/68 p-5 backdrop-blur-xl lg:absolute lg:bottom-6 lg:left-6 lg:right-6 lg:mt-0">
-                  <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-                    <div>
-                      <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
-                        Foco consultivo
-                      </p>
-                      <p className="mt-2 max-w-lg text-sm leading-7 text-slate-300">
-                        Entregas pensadas para sua necessidade real, não apenas para o mínimo básico.
-                      </p>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         <section id="contato" className="container pb-20">
           <div className="relative overflow-hidden rounded-[2.2rem] border border-white/12 bg-[linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] p-8 shadow-[0_24px_70px_rgba(2,8,23,0.46)] backdrop-blur-xl lg:p-10">
@@ -392,20 +316,15 @@ export default function Home() {
               <div>
                 <p className="eyebrow">Contato</p>
                 <h2 className="section-title mt-4 max-w-lg text-white">
-                  Precisa de uma solução técnica confiável e atendendo o seu prazo?
+                  Solicite a sua proposta!
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-7 text-slate-300">
-                  Entre em contato e receba uma proposta estruturada para seu cenário, sem improviso.
+                  Entre em contato para uma solução técnica confiável e atendendo o prazo que você precisa.
                 </p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/52 p-6">
-                  <p className="text-[0.7rem] tracking-[0.24em] text-slate-400 uppercase">Email</p>
-                  <p className="mt-3 font-heading text-sm font-semibold text-white break-all">
-                    contato@clp.com.br
-                  </p>
-                </div>
+                
                 <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/52 p-6">
                   <p className="text-[0.7rem] tracking-[0.24em] text-slate-400 uppercase">Telefone</p>
                   <p className="mt-3 font-heading text-lg font-semibold text-white">
@@ -424,7 +343,15 @@ export default function Home() {
         </section>
       </main>
 
+      <footer className="relative z-10 bg-black/85 py-3">
+        <p className="text-center text-xs font-medium tracking-[0.18em] text-slate-300 uppercase">
+          Developed by OverStack
+        </p>
+      </footer>
+
       <FloatingWhatsAppButton />
     </div>
   );
 }
+
+
