@@ -23,6 +23,11 @@ on:
         required: false
         default: "main"
         type: string
+      deploy_repo_url:
+        description: Expected origin URL on target VM (safety check)
+        required: false
+        default: "https://github.com/GuilhermeGms3/landing-clp.git"
+        type: string
       compose_command:
         description: Docker compose command on VM (docker-compose or docker compose)
         required: false
@@ -95,6 +100,14 @@ jobs:
             set -e
 
             cd "${{ inputs.deploy_path }}"
+
+            ACTUAL_REMOTE="$(git remote get-url origin)"
+            if [ "$ACTUAL_REMOTE" != "${{ inputs.deploy_repo_url }}" ]; then
+              echo "Repo mismatch on server."
+              echo "Expected: ${{ inputs.deploy_repo_url }}"
+              echo "Found:    $ACTUAL_REMOTE"
+              exit 1
+            fi
 
             git fetch origin "${{ inputs.deploy_branch }}"
             git checkout "${{ inputs.deploy_branch }}"

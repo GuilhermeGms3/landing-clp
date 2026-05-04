@@ -114,3 +114,7 @@ whatsapp-bot/auth/
 release/
 release.rar
 .vscode/settings.json
+
+# Infra/hub configs are local-only and must not be versioned in landing repo
+_hub-homepage/
+_hub-homepage.tar.gz

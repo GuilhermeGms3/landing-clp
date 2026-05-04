@@ -19,6 +19,7 @@ jobs:
       run_deploy: true
       deploy_path: "/home/guilherme/apps/clpengenharia"
       deploy_branch: "main"
+      deploy_repo_url: "https://github.com/GuilhermeGms3/landing-clp.git"
       compose_command: "docker-compose"
     secrets:
       SSH_HOST: ${{ secrets.SSH_HOST }}

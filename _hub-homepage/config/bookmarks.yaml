@@ -1,9 +1,0 @@
-- Plataforma:
-    - Portainer (Proxy):
-        - href: http://portainer-proxy.proxy
-    - Portainer (Pipeline):
-        - href: http://portainer-pipeline.proxy
-    - N8N:
-        - href: http://n8n.proxy
-    - CLP Engenharia:
-        - href: https://clpengenharia.com
