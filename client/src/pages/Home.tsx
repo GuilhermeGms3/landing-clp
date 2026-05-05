@@ -17,7 +17,6 @@ import {
   MessageCircle,
   ShieldCheck,
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { InteractiveEngineeringBackground } from "@/components/InteractiveEngineeringBackground";
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 
@@ -89,38 +88,21 @@ export default function Home() {
 
       <header className="relative z-10">
         <div className="container pt-6">
-          <div className="glass-panel flex items-center justify-center gap-6 rounded-full bg-blue-950/40 px-5 py-3 lg:justify-between lg:py-2">
+          <div className="flex items-center justify-center lg:justify-start lg:pl-5">
             <a href="#" className="group inline-flex items-center transition-opacity hover:opacity-95">
               <img
                 src="/assets/logo-clp-header-transparent.png"
                 alt="CLP Engenharia Consultiva"
-                className="h-28 w-auto object-contain sm:h-28 lg:h-16"
+                className="h-44 w-auto object-contain sm:h-48 lg:h-40 xl:h-44"
               />
             </a>
-
-            <nav className="hidden flex-1 items-center justify-center gap-3 text-sm text-slate-200 lg:flex">
-              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#servicos">
-                Serviços
-              </a>
-              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#segmentos">
-                Segmentos
-              </a>
-              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#diferenciais">
-                Diferenciais
-              </a>
-              <a className="rounded-full border border-blue-300/20 bg-blue-900/30 px-5 py-1.5 transition-all hover:-translate-y-0.5 hover:bg-blue-400/25 hover:text-white" href="#contato">
-                Contato
-              </a>
-            </nav>
-
-
           </div>
         </div>
       </header>
 
       <main className="relative z-10">
         <section className="container pb-24 pt-10 lg:pb-28 lg:pt-16">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <motion.div
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
@@ -147,21 +129,21 @@ export default function Home() {
               initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.85, delay: 0.15, ease: "easeOut" }}
-              className="relative"
+              className="relative lg:-mr-8 xl:-mr-14"
             >
               <div className="absolute -left-10 top-8 hidden h-36 w-36 rounded-full bg-blue-500/16 blur-3xl lg:block" />
               <div className="absolute -bottom-8 right-8 hidden h-40 w-40 rounded-full bg-blue-400/14 blur-3xl lg:block" />
 
               <div className="glass-panel relative overflow-hidden rounded-[2rem] border border-white/12 p-5 shadow-[0_30px_90px_rgba(2,8,23,0.55)]">
                 <img
-                  src="/assets/logo-clp-oficial.jpeg"
-                  alt="Ambiente avançado de visualização de engenharia e infraestrutura"
-                  className="h-[300px] w-full rounded-[1.5rem] object-cover object-top sm:h-[380px] lg:h-[420px]" style={{ objectPosition: "center 20%" }}
+                  src="/assets/blueprint-floor-plan-gemini.png"
+                  alt="Planta residencial em blueprint técnico"
+                  className="h-[380px] w-full rounded-[1.5rem] object-cover object-center sm:h-[480px] lg:h-[560px] xl:h-[620px]"
                 />
 
                 <div className="mt-4 grid gap-4 md:grid-cols-2 lg:absolute lg:inset-x-9 lg:bottom-9 lg:mt-0">
-                  <Card className="border-white/10 bg-slate-950/64 text-white shadow-2xl backdrop-blur-xl">
-                    <CardContent className="p-5">
+                  <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/64 text-white shadow-2xl backdrop-blur-xl">
+                    <div className="p-5">
                       <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
                         NOSSO COMPROMISSO
                       </p>
@@ -171,11 +153,11 @@ export default function Home() {
                       <p className="mt-2 text-sm leading-6 text-slate-100">
                         Sem perder detalhamento técnico e qualidade.
                       </p>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
 
-                  <Card className="border-blue-200/20 bg-slate-900/72 text-white shadow-2xl backdrop-blur-xl">
-                    <CardContent className="flex h-full flex-col justify-between p-5">
+                  <div className="rounded-[1.5rem] border border-blue-200/20 bg-slate-900/72 text-white shadow-2xl backdrop-blur-xl">
+                    <div className="flex h-full flex-col justify-between p-5">
                       <div>
                         <p className="text-[0.65rem] tracking-[0.24em] text-slate-400 uppercase">
                           Escala de atuação
@@ -184,8 +166,8 @@ export default function Home() {
                           Condomínios, imobiliárias, indústrias, construtoras, investidores e escritórios jurídicos.
                         </p>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -230,17 +212,29 @@ export default function Home() {
 
         <section id="segmentos" className="container pb-24">
           <div className="space-y-8">
-            <div>
-              <p className="eyebrow">Segmentos</p>
-              <motion.h2
-                initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: true, amount: 0.55 }}
+            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+              <div>
+                <p className="eyebrow">Segmentos</p>
+                <h2
+                  className="section-title mt-4 max-w-2xl bg-[linear-gradient(90deg,#e2e8f0_0%,#bfdbfe_45%,#93c5fd_60%,#e2e8f0_100%)] bg-clip-text text-transparent"
+                >
+                  Atendemos empresas e pessoas que necessitam de qualidade e prazo sem perder a segurança e amparo na tomada de decisões baseadas em conteúdo técnico.
+                </h2>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.75, ease: "easeOut" }}
-                className="section-title mt-4 max-w-2xl bg-[linear-gradient(90deg,#e2e8f0_0%,#bfdbfe_45%,#93c5fd_60%,#e2e8f0_100%)] bg-clip-text text-transparent"
+                className="glass-panel overflow-hidden rounded-[2rem] border border-white/10 p-4"
               >
-                Atendemos empresas e pessoas que necessitam de qualidade e prazo sem perder a segurança e amparo na tomada de decisões baseadas em conteúdo técnico.
-              </motion.h2>
+                <img
+                  src="/assets/logo-clp-oficial.jpeg"
+                  alt="Identidade visual CLP Engenharia Consultiva"
+                  className="h-[260px] w-full rounded-[1.5rem] object-cover object-center sm:h-[320px] lg:h-[360px]"
+                />
+              </motion.div>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -353,5 +347,3 @@ export default function Home() {
     </div>
   );
 }
-
-
